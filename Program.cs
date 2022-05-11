@@ -11,10 +11,11 @@ namespace MyProject2
         static void Main(string[] args)
         {
 
-            
 
 
-
+            float number = 10.1234f;
+            Console.WriteLine(number);
+            Console.WriteLine("eferferferfer");
 
 
         }
