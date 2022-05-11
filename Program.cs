@@ -12,8 +12,8 @@ namespace MyProject2
         {
 
 
-
             
+
 
 
         }
@@ -23,6 +23,12 @@ namespace MyProject2
             float number = 10.1234f;
             Console.WriteLine(number);
 
+        }
+        static void S11()
+        {
+            double a = Math.E;
+            a = Math.Round(a, 1);
+            Console.WriteLine(a);
         }
             
     }
