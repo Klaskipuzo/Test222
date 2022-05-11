@@ -13,9 +13,7 @@ namespace MyProject2
 
 
 
-            float number = 10.1234f;
-            Console.WriteLine(number);
-            Console.WriteLine("eferferferfer");
+            
 
 
         }
