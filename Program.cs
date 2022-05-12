@@ -11,7 +11,8 @@ namespace MyProject2
         static void Main(string[] args)
         {
             
-                     
+
+                              
 
         }
 
@@ -124,17 +125,48 @@ namespace MyProject2
 
         static void S2_1()
         {
+
+            //Составить программу:
+            //а) вычисления значения функции y = 7x2 + 3x + 6 при любом значении x;
+            //б) вычисления значения функции x = 12a2 + 7a + 12 при любом значении а.
+
             Random random = new Random();
             var y = 7 * Math.Pow(random.Next(1, 10), 2) + 3 * random.Next(1, 10) + 6;
             Console.WriteLine(y);
+
+
+            var x = 12 * Math.Pow(random.Next(1, 10), 2) + 7 * random.Next(1, 10) + 12;
+            Console.WriteLine(x);
+
         }
 
         static void S2_2()
         {
-            Random random = new Random();
-            var x = 12 * Math.Pow(random.Next(1, 10), 2) + 7 * random.Next(1, 10) + 12;
-            Console.WriteLine(x);
+            //Дана сторона квадрата.Найти его периметр
+            Console.WriteLine("Укажите длину стороны квадрата");
+            var q = int.Parse(Console.ReadLine());
+            var p = Math.Pow(q, 2);
+            Console.WriteLine(p);
         }
+
+        static void S2_3()
+        {
+            //Дан радиус окружности. Найти ее диаметр.
+
+                Console.WriteLine("Какой радиус окружности");
+
+                var R = int.Parse(Console.ReadLine());
+
+                var D = 2 * R;
+
+                Console.WriteLine(D);
+        }
+
+        static void S2_4()
+        {
+            
+        }
+        
     }
 
 }
