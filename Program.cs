@@ -10,13 +10,7 @@ namespace MyProject2
     {
         static void Main(string[] args)
         {
-
-            string str = "5";
-            Convert.ToInt32(str);
-            Console.WriteLine(str + 5);
-
-
-
+            
 
         }
        
@@ -276,6 +270,48 @@ namespace MyProject2
                 Console.WriteLine($" Условие выполнено: {num1 * num2}");
                 break;
             }
+        }
+
+        static void dzWhileYoutube()
+        {
+            //Сумма и количество четных и нечетных чисел.
+            Console.WriteLine("Введите число");
+
+            var inenger = int.Parse(Console.ReadLine());
+
+            var count = 0;
+            var sumInt = 0;
+            var sumOdd = 0;
+            var sumInt1 = 0;
+            var sumOdd1 = 0;
+
+
+            while (count < inenger)
+            {
+                count++;
+
+                if (count % 2 == 0)
+                {
+                    sumInt += count;
+                    sumInt1++;
+
+                }
+                else
+                {
+                    sumOdd += count;
+                    sumOdd1++;
+                }
+
+
+
+
+
+            }
+
+            Console.WriteLine($"Количество четных чисел: {sumInt1}");
+            Console.WriteLine($"Количество нечетных чисел: {sumOdd1}");
+            Console.WriteLine($"Сумма четных чисел: {sumInt}");
+            Console.WriteLine($"Сумма нечетных чисел: {sumOdd}");
         }
         
     }
