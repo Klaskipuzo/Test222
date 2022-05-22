@@ -10,11 +10,16 @@ namespace MyProject2
     {
         static void Main(string[] args)
         {
-            
 
-                              
+            string str = "5";
+            Convert.ToInt32(str);
+            Console.WriteLine(str + 5);
+
+
+
 
         }
+       
 
         static void S1()
         {
@@ -165,6 +170,112 @@ namespace MyProject2
         static void S2_4()
         {
             
+        }
+        
+        static void dzIfMetanit()
+        {
+            Console.WriteLine("Введите сумму своего вклада");
+            var sumS = double.Parse(Console.ReadLine());
+            double result = 0;
+
+            if (sumS <= 100)
+            {
+                result = sumS * 0.05;
+                Console.WriteLine($"Вам начисляется 5 %, ваш процент составляет : {result}");
+            }
+            else if (sumS > 100 && sumS < 200)
+            {
+                result = sumS * 0.07;
+                Console.WriteLine($"Вам начисляется 7 %, ваш процент составляет : {result}");
+            }
+            else if (sumS > 200)
+            {
+                result = sumS * 0.1;
+                Console.WriteLine($"Вам начисляется 10 %, ваш процент составляет : {result}");
+            }
+            else
+            {
+                Console.WriteLine("error");
+            }
+            Console.WriteLine($"Итоговая сумма: {sumS + result}");
+        }
+
+        static void dzfor1Metanit()
+        {
+            //За каждый месяц банк начисляет к сумме вклада 7% от суммы. Напишите консольную программу, в которую пользователь вводит сумму вклада и количество месяцев. А банк вычисляет конечную сумму вклада с учетом начисления процентов за каждый месяц.
+
+            //Для вычисления суммы с учетом процентов используйте цикл for. Для ввода суммы вклада используйте выражение Convert.ToDecimal(Console.ReadLine())(сумма вклада будет представлять тип decimal).
+            Console.WriteLine("Введите сумму вклада");
+            var sum = Convert.ToDecimal(Console.ReadLine());
+            Console.WriteLine("Введите количество месяцев");
+            var months = int.Parse(Console.ReadLine());
+
+
+            for (int m = 0; m < months; m++)
+            {
+                sum += sum * 0.7M;
+
+            }
+            Console.WriteLine($"После {months} месяцев сумма вклада составит {sum}");
+        }
+
+        static void dzfor2Metanit()
+        {
+
+            //Перепишите предыдущую программу, только вместо цикла for используйте цикл while.
+            Console.WriteLine("Введите сумму вклада");
+            var sum = Convert.ToDecimal(Console.ReadLine());
+            Console.WriteLine("Введите количество месяцев");
+            var months = int.Parse(Console.ReadLine());
+            var i = months;
+            while (i > 0)
+            {
+                sum += sum * 0.7M;
+                i--;
+            }
+
+            Console.WriteLine($"После {months} месяцев сумма вклада составит {sum}");
+        }
+
+        static void dzfor3Metanit()
+        {
+            //Напишите программу, которая выводит на консоль таблицу умножения.
+
+
+
+            for (int i = 1; i < 10; i++)
+            {
+                for (int j = 1; j < 10; j++)
+                {
+                    Console.Write($"{i * j}\t");
+                }
+                Console.WriteLine();
+            }
+        }
+
+        static void dzfor4Metanit()
+        {
+            while (true)
+            {
+                /* Напишите программу, в которую пользователь вводит два числа и выводит результат их умножения. При этом программа должны запрашивать у пользователя ввод чисел, пока оба вводимых числа не окажутся в диапазоне от 0 до 10. Если введенные числа окажутся больше 10 или меньше 0, то программа должна вывести пользователю о том, что введенные числа недопустимы, и повторно запросить у пользователя ввод двух чисел. Если введенные числа принадлежат диапазону от 0 до 10, то программа выводит результат умножения.
+
+                  Для организации ввода чисел используйте бесконечный цикл while и оператор break.*/
+                Console.WriteLine("Введите первое число в диапазоне от 0 до 10");
+                var num1 = int.Parse(Console.ReadLine());
+                Console.WriteLine("Введите второе число в диапазоне от 0 до 10");
+                var num2 = int.Parse(Console.ReadLine());
+
+                if (num1 > 0 || num1 <= 0 || num2 > 0 || num2 <= 10)
+                {
+                    Console.WriteLine("готово");
+                }
+                else
+                {
+                    Console.WriteLine("Вы ввели неверноые числа");
+                }
+                Console.WriteLine($" Условие выполнено: {num1 * num2}");
+                break;
+            }
         }
         
     }
