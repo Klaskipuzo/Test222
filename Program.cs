@@ -10,7 +10,23 @@ namespace MyProject2
     {
         static void Main(string[] args)
         {
+           
             
+            
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         }
        
@@ -285,7 +301,6 @@ namespace MyProject2
             var sumInt1 = 0;
             var sumOdd1 = 0;
 
-
             while (count < inenger)
             {
                 count++;
@@ -302,16 +317,73 @@ namespace MyProject2
                     sumOdd1++;
                 }
 
-
-
-
-
             }
 
             Console.WriteLine($"Количество четных чисел: {sumInt1}");
             Console.WriteLine($"Количество нечетных чисел: {sumOdd1}");
             Console.WriteLine($"Сумма четных чисел: {sumInt}");
             Console.WriteLine($"Сумма нечетных чисел: {sumOdd}");
+        }
+
+        static void dzArray1Youtube()
+        {
+            //заполнить массив вручную с клавиатуры
+            int[] myArray = new int[5];
+
+            myArray[0] = 1;
+            myArray[1] = 2;
+            myArray[2] = 3;
+            myArray[3] = 4;
+            myArray[4] = 5;
+        }
+
+        static void dzArray2Youtube()
+        {
+            //Вывести массив в обратном порядке
+
+            int[] myArray2 = new int[5];
+            for (int j = myArray2.Length - 1; j >= 0; j--)
+            {
+                Console.WriteLine(j);
+            }
+        }
+
+        static void dzArray3Youtube()
+        {
+            //Найти сумму четных чисел в массиве
+
+            int[] myArray3 = new int[5];
+
+            var sumInt = 0;
+
+
+            for (int i = 0; i <= myArray3.Length; i++)
+            {
+                if (i % 2 == 0)
+                {
+                    sumInt += i;
+
+                }
+
+            }
+            Console.WriteLine(sumInt);
+        }
+
+        static void dzArray4Youtube()
+        {
+            //Найти наименьшее число в массиве
+            Random rand = new Random();
+            int[] myArray = new int[10];
+
+            for (int i = 0; i < myArray.Length; i++)
+            {
+                myArray[i] = rand.Next(1, 9);
+                if (myArray[i] == 1)
+                {
+                    Console.WriteLine($"Наименьшие числа в массиве {myArray[i]}");
+                }
+
+            }
         }
         
     }
