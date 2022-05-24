@@ -10,23 +10,7 @@ namespace MyProject2
     {
         static void Main(string[] args)
         {
-           
             
-            
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         }
        
@@ -327,14 +311,28 @@ namespace MyProject2
 
         static void dzArray1Youtube()
         {
-            //заполнить массив вручную с клавиатуры
-            int[] myArray = new int[5];
+            //заполнение с клавиатуры
 
-            myArray[0] = 1;
-            myArray[1] = 2;
-            myArray[2] = 3;
-            myArray[3] = 4;
-            myArray[4] = 5;
+            Console.WriteLine("Введите количество ");
+            int klaVa = int.Parse(Console.ReadLine());
+
+            int[] myArray = new int[klaVa];
+
+            for (int i = 0; i < myArray.Length; i++)
+            {
+                Console.WriteLine("Введите элемент массива");
+                myArray[i] = int.Parse(Console.ReadLine());
+            }
+
+            Console.WriteLine("Сам массив:\n");
+
+            for (int i = 0; i < myArray.Length; i++)
+            {
+                Console.WriteLine(myArray[i]);
+            }
+
+
+
         }
 
         static void dzArray2Youtube()
